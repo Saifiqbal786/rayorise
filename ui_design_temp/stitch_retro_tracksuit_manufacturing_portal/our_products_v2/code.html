@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FabricForge Industrial | B2B Manufacturing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#e5e2e1",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-error": "#690005",
+                    "background": "#131313",
+                    "inverse-primary": "#124af0",
+                    "on-primary-fixed": "#001356",
+                    "surface-dim": "#131313",
+                    "on-tertiary-container": "#4c3e00",
+                    "on-primary-container": "#c9d1ff",
+                    "inverse-surface": "#e5e2e1",
+                    "outline-variant": "#434654",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "on-tertiary-fixed": "#221b00",
+                    "on-secondary-container": "#342800",
+                    "on-primary": "#002388",
+                    "secondary": "#e9c349",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-secondary": "#3c2f00",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#ffe16d",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-tint": "#b8c3ff",
+                    "tertiary-container": "#c9a900",
+                    "surface-bright": "#393939",
+                    "on-tertiary-fixed-variant": "#544600",
+                    "secondary-container": "#af8d11",
+                    "on-surface-variant": "#c3c6d6",
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#8d90a0",
+                    "on-primary-fixed-variant": "#0035be",
+                    "surface-container": "#201f1f",
+                    "surface-container-highest": "#353534",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed": "#ffe088",
+                    "on-tertiary": "#3a3000",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-container": "#0545ed",
+                    "primary": "#b8c3ff",
+                    "primary-fixed": "#dde1ff",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#353534",
+                    "tertiary": "#e9c400",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "surface": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+        .text-machined { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-md flex justify-between items-center px-8 py-4 w-full">
+<div class="text-xl font-bold tracking-tighter text-[#b8c3ff] font-['Space_Grotesk']">
+            FabricForge Industrial
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#b8c3ff] border-b-2 border-[#b8c3ff] pb-1" href="#">Inventory</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c3c6d6] hover:text-[#b8c3ff] transition-colors" href="#">Blueprints</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c3c6d6] hover:text-[#b8c3ff] transition-colors" href="#">Production</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c3c6d6] hover:text-[#b8c3ff] transition-colors" href="#">Logistics</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#b8c3ff] p-2 hover:bg-[#2a2a2a] rounded transition-all cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-[#b8c3ff] p-2 hover:bg-[#2a2a2a] rounded transition-all cursor-pointer" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-sm bg-surface-container-high overflow-hidden border border-outline-variant/30">
+<img alt="Operator Profile" data-alt="close-up portrait of a male production manager in a clean industrial environment with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnFmhZFoRXjDCdy-jsaE9wpc5chGZwa1bnZhXh-BPCMb0onWjkdVewiQPge29KkPwfoqdbdTQZwQkaq6zbXHg_z8WTfGAOkOdz0KN1nxHbPGkCI-Y0t24S4da7VqtZRyveBSmO-NJaEPKAHVWfR44zHuxZE1ZfHttiJMICqqHLilebDoFKWVOPLTrcl5ylcvi7ZSFABveuo-lNbL-84X54RBj4U8m3n-GU42dpZXJZoQ9srf1_C0cDlLzVWzRT07nPKGi_h2LxwIDu"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#131313] border-r border-[#434654]/15 hidden md:flex flex-col pt-20 pb-8 px-4 z-40">
+<div class="mb-8 px-2">
+<div class="text-[#b8c3ff] font-['Manrope'] text-sm uppercase tracking-widest font-bold">Plant 01</div>
+<div class="text-on-surface-variant text-[10px] uppercase tracking-tighter opacity-60">Active Session</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-3 text-[#c3c6d6] opacity-70 hover:bg-[#2a2a2a] hover:opacity-100 linear transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Manrope'] text-sm uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 bg-[#2a2a2a] text-[#b8c3ff] border-l-4 border-[#b8c3ff] linear transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-['Manrope'] text-sm uppercase tracking-widest">SKU Registry</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 text-[#c3c6d6] opacity-70 hover:bg-[#2a2a2a] hover:opacity-100 linear transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+<span class="font-['Manrope'] text-sm uppercase tracking-widest">Machine Status</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 text-[#c3c6d6] opacity-70 hover:bg-[#2a2a2a] hover:opacity-100 linear transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="factory">factory</span>
+<span class="font-['Manrope'] text-sm uppercase tracking-widest">Order Pipeline</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 text-[#c3c6d6] opacity-70 hover:bg-[#2a2a2a] hover:opacity-100 linear transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span class="font-['Manrope'] text-sm uppercase tracking-widest">Quality Control</span>
+</a>
+</nav>
+<div class="pt-4 border-t border-outline-variant/15 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#c3c6d6] opacity-70 hover:bg-[#2a2a2a] hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest">Support</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#c3c6d6] opacity-70 hover:bg-[#2a2a2a] hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest">Documentation</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-64 pt-24 px-8 pb-12">
+<!-- Hero Header -->
+<header class="mb-16 max-w-4xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-sm">ISO 9001 Certified</span>
+<div class="h-px flex-1 bg-outline-variant/20"></div>
+</div>
+<h1 class="text-machined text-6xl md:text-7xl font-bold tracking-tighter text-on-background leading-none mb-6">
+                OUR MANUFACTURING <br/><span class="text-primary">PRODUCTS</span>
+</h1>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl leading-relaxed">
+                Precision-engineered performance apparel for international distribution. FabricForge delivers high-spec technical textiles with modular customization options.
+            </p>
+</header>
+<!-- Flagship Section: Retro Panel Tracksuit -->
+<section class="mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 border border-outline-variant/15 overflow-hidden">
+<div class="lg:col-span-7 relative h-[500px] lg:h-auto overflow-hidden">
+<img alt="Flagship Product" class="w-full h-full object-cover grayscale contrast-125" data-alt="wide shot of a high-end black tracksuit with geometric grey panels on a minimalist industrial background with harsh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSz8nrucSGExsXhWlK2TaC1RCTuO1E-Dnl0TkZZ5uatvo_fwNVUfD2oOrjV29zfctrQzZX7YX7wLoACPQjiGkDJanN96dIbZUkTyeOQ3m14dynF7zkLiiWrbeFg3OO7IBJC1I-7HFUHfF7oRzCskXthJhNN8kQQ05dZfy3ck_3a4a7CNmRLm_p4lGQxcgAV9Rax9LvVs1ID_3aVu7Rln-9LUaUTb9n3mLFqcF-LWHrHzxeu2Eg6mufYZVS4k_CyH-Hz43DzlE4lxNl"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent opacity-40"></div>
+<div class="absolute bottom-8 left-8">
+<div class="flex gap-4">
+<div class="bg-surface-container-highest/90 backdrop-blur-md p-4 border-l-2 border-primary">
+<p class="text-[10px] text-primary uppercase font-bold tracking-widest mb-1">GSM Weight</p>
+<p class="text-xl font-headline font-bold">320G</p>
+</div>
+<div class="bg-surface-container-highest/90 backdrop-blur-md p-4 border-l-2 border-secondary">
+<p class="text-[10px] text-secondary uppercase font-bold tracking-widest mb-1">Lead Time</p>
+<p class="text-xl font-headline font-bold">14 Days</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container-high p-12 flex flex-col justify-center">
+<span class="text-secondary font-machined font-bold uppercase tracking-[0.3em] mb-4 text-sm">Flagship Series // 01</span>
+<h2 class="text-machined text-4xl font-bold mb-6 tracking-tight">RETRO PANEL TRACKSUIT</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        The pinnacle of technical streetwear manufacturing. Featuring laser-cut paneling, bonded seams, and reinforced stress points. Designed for maximum mobility and industrial durability.
+                    </p>
+<div class="space-y-6 mb-10">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-surface-container-lowest flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary" data-icon="texture">texture</span>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest">Fabric Detail</h4>
+<p class="text-xs text-on-surface-variant">Polyester-Elastane Interlock Blend</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-surface-container-lowest flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest">Construction</h4>
+<p class="text-xs text-on-surface-variant">4-Needle Flatlock Stitching</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-machined font-bold uppercase tracking-widest py-4 px-8 text-sm flex items-center justify-center gap-4 hover:brightness-110 transition-all rounded-sm">
+                        Customize This Product
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Product Grid Sections -->
+<div class="space-y-24">
+<!-- Category 01: Track Jackets -->
+<section>
+<div class="flex items-end justify-between mb-8 border-b border-outline-variant/15 pb-4">
+<div>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">Catalog 24 // A</span>
+<h3 class="text-machined text-2xl font-bold tracking-tight">TRACK JACKETS</h3>
+</div>
+<span class="text-[10px] text-on-surface-variant opacity-40">04 SKUS FOUND</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card -->
+<div class="group">
+<div class="aspect-square bg-surface-container-lowest mb-4 overflow-hidden border border-outline-variant/10">
+<img alt="Track Jacket" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" data-alt="close-up of a premium navy blue technical track jacket with high collar and chrome zipper detail in a studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFPsCQtEvR_PYdcnQrRKQaKCYT2XssKH4-BPpz3iPKX572Sa1O6TG_4t1gTjYe8IuAxl-je5z-hPpar4f1Z01p99pQdtEdIJStiIP2lA1IaC1TvsbNchMMUZSW5zgLpb-opuFtDMekjbr_74017wekrzska8WqsiXo2-ohFYbOB7Jbo_E9Qx4gEbSi3QL5mI3WjgQh5HykYcENeYKbH0ZZhhci0SyCTYJtO2BXnEPHFHd5_nFPL2vJUiN-klTRVuqJSEtohP4sFKCn"/>
+</div>
+<h4 class="font-machined font-bold text-lg mb-2">THERMAL COMPRESSION JACKET</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Cold-weather performance with moisture-wicking inner lining and weather-resistant outer shell.</p>
+<button class="w-full py-3 bg-surface-container-highest border border-outline-variant/20 text-on-surface font-machined text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+                            Customize This Product
+                        </button>
+</div>
+<div class="group">
+<div class="aspect-square bg-surface-container-lowest mb-4 overflow-hidden border border-outline-variant/10">
+<img alt="Track Jacket" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" data-alt="folded high-performance sports jacket showing fine fabric texture and reinforced sleeve cuffs on dark slate surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7i6FcF9id5EUv-GdH09kQifh7Cei3V5bLLinEyNa9iDO5BprIn6VQxtXh0bK-Tvm1m9Bd-RQmAwspY1a_81K-3gfTLX2xgf6hZanXutOYYiD1CTqON_1WUIYun0uRzEFby--t7JEp1a_6_4YXWxSm3CCGySd4f0iywUqc-mFkVdUi_-gC8nP99cayfriWfffv66mym8yF-5GkAWGxMUg8Qom06dAcYxKmermhgBJrUjrIka7tiiJN4bjdneIQxYQjLBu1kIChNgiY"/>
+</div>
+<h4 class="font-machined font-bold text-lg mb-2">MODULAR WIND-TECH SHELL</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Ultra-lightweight ripstop fabric with ventilation ports and adjustable hood system.</p>
+<button class="w-full py-3 bg-surface-container-highest border border-outline-variant/20 text-on-surface font-machined text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+                            Customize This Product
+                        </button>
+</div>
+<div class="group">
+<div class="aspect-square bg-surface-container-lowest mb-4 overflow-hidden border border-outline-variant/10">
+<img alt="Track Jacket" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" data-alt="minimalist black athletic jacket displayed on a clean industrial metal rack with sharp overhead lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHwZDFCL649FvAQdj-qIZmx5ZvOiT0wXc7ROq3TCps1xZmm9zfVonzlQSokUxxPf1PFzO--Zn8DTeF0JA8hVDx-iirGMtMvr4Ecx_vjcg_4ssWx08dSwnYpWft50BzerWXuUVX9zewLl3yVJhI8oQknn17HvGb28OXDly9v59E5iPwuIHmnXv8XPf4F8XyhSO9IYx0jKUrGH96qQQfkZ8QqAhFei2Kqe1_rltej6sebIeumPH0Z3yjc3hbVr4ILtRamiya5Ld9Pax5"/>
+</div>
+<h4 class="font-machined font-bold text-lg mb-2">STEALTH UTILITY BOMBER</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Urban aesthetic combined with performance sportswear specs. Multi-pocket industrial layout.</p>
+<button class="w-full py-3 bg-surface-container-highest border border-outline-variant/20 text-on-surface font-machined text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+                            Customize This Product
+                        </button>
+</div>
+</div>
+</section>
+<!-- Category 02: Track Pants -->
+<section>
+<div class="flex items-end justify-between mb-8 border-b border-outline-variant/15 pb-4">
+<div>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">Catalog 24 // B</span>
+<h3 class="text-machined text-2xl font-bold tracking-tight">TRACK PANTS</h3>
+</div>
+<span class="text-[10px] text-on-surface-variant opacity-40">02 SKUS FOUND</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group">
+<div class="aspect-square bg-surface-container-lowest mb-4 overflow-hidden border border-outline-variant/10">
+<img alt="Track Pants" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" data-alt="detailed shot of technical joggers with ergonomic knee articulation and tapered ankles in dark charcoal fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACLNsqxKom4T9e82pkuXAO5mehY4O9KOPO2LQR_zBVTyaPWRwmTtogaQc9cwdfybv8UrBDRoQXCCVR1SAqdOQ_DF9y0aY1B81XKpu3djGiO--t0zFZaydJg6CK_G5Xonx0bVpyi7HT2on9tKleKL8-luMki346-k6lF544qv5PbIf52FZa-19cie-hP-acuoyLJWpMtSO-XpTBVdFWZ7goPBrK9LYa5qIuK9d2eotXVphrwhVG31n-oCx5AH2YBzsn9j9JCx90qHnn"/>
+</div>
+<h4 class="font-machined font-bold text-lg mb-2">KINETIC JOGGER SYSTEM</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Ergonomic fit with articulated knees and secure zip-lock cargo pockets for active use.</p>
+<button class="w-full py-3 bg-surface-container-highest border border-outline-variant/20 text-on-surface font-machined text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+                            Customize This Product
+                        </button>
+</div>
+<div class="group">
+<div class="aspect-square bg-surface-container-lowest mb-4 overflow-hidden border border-outline-variant/10">
+<img alt="Track Pants" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" data-alt="pair of grey performance sweatpants showing reflective piping and textured waistband detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnb_idp_m3mcQR-50ego9fpkW-TesolgTqNzR4AGFED2qJUSM64xHxlEhWZaMjwBrMpXfeHjgZwEHpKkPAz9Xf4VobeCMfzjlsfoqBtUd24VZTV_Qu_FE_hJ4k5ewX1zvJAB9n11af3H9RU3-ZXcSv5FYIYc4f4l5KPgcqUwPjhKh-rLTw_VUJ0UW1no-2vsAexFHnbtPNMAmHJjdP-Ko78aE0kFGFpwg5fjNUvD163WXEaHa3f75-6KFaYbii4D33gmf19x2Dc0Ju"/>
+</div>
+<h4 class="font-machined font-bold text-lg mb-2">VAPOR-CORE TRACK PANTS</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Maximizes airflow through laser-perforated zones and lightweight stretch-weave fabric.</p>
+<button class="w-full py-3 bg-surface-container-highest border border-outline-variant/20 text-on-surface font-machined text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+                            Customize This Product
+                        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Call to Action Section -->
+<section class="mt-32 mb-12 p-16 bg-surface-container-lowest border-l-4 border-secondary relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-machined text-4xl font-bold mb-4 tracking-tighter">PRE-PRODUCTION SAMPLE</h2>
+<p class="text-on-surface-variant max-w-xl mb-8">Test the quality of our fabric blends and construction before committing to full-scale production. Samples shipped within 48 hours.</p>
+<button class="bg-secondary text-on-secondary font-machined font-bold uppercase tracking-[0.2em] px-10 py-5 text-sm hover:brightness-110 transition-all rounded-sm">
+                    Request Sample
+                </button>
+</div>
+<div class="absolute -right-20 -top-20 text-[20rem] font-bold text-outline-variant opacity-5 pointer-events-none select-none">
+                ISO
+            </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-12 border-t border-[#434654]/15 flex flex-col md:flex-row justify-between items-center px-12 md:ml-64 md:max-w-[calc(100%-16rem)]">
+<div class="mb-6 md:mb-0">
+<p class="font-['Manrope'] text-xs text-[#c3c6d6] uppercase tracking-tighter">
+                © 2024 <span class="text-[#e9c349] font-bold">FabricForge Manufacturing Systems.</span> ISO 9001 Certified.
+            </p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs text-[#c3c6d6] uppercase tracking-tighter hover:text-[#b8c3ff] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-xs text-[#c3c6d6] uppercase tracking-tighter hover:text-[#b8c3ff] transition-colors underline" href="#">Technical Specs</a>
+<a class="font-['Manrope'] text-xs text-[#c3c6d6] uppercase tracking-tighter hover:text-[#b8c3ff] transition-colors" href="#">API Documentation</a>
+<a class="font-['Manrope'] text-xs text-[#c3c6d6] uppercase tracking-tighter hover:text-[#b8c3ff] transition-colors" href="#">Compliance</a>
+</div>
+</footer>
+</body></html>
